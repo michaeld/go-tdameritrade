@@ -78,16 +78,16 @@ type ExpDateOption struct {
 	TradeTimeInLong        int       `json:"tradeTimeInLong"`
 	QuoteTimeInLong        int       `json:"quoteTimeInLong"`
 	NetChange              float64   `json:"netChange"`
-	Volatility             JSONFloat `json:"volatility"`
-	Delta                  JSONFloat `json:"delta"`
-	Gamma                  JSONFloat `json:"gamma"`
-	Theta                  JSONFloat `json:"theta"`
-	Vega                   JSONFloat `json:"vega"`
-	Rho                    JSONFloat `json:"rho"`
+	Volatility             JSONFloat `json:"volatility" dataframe:",float"`
+	Delta                  JSONFloat `json:"delta" dataframe:",float"`
+	Gamma                  JSONFloat `json:"gamma" dataframe:",float"`
+	Theta                  JSONFloat `json:"theta" dataframe:",float"`
+	Vega                   JSONFloat `json:"vega" dataframe:",float"`
+	Rho                    JSONFloat `json:"rho" dataframe:",float"`
 	OpenInterest           int       `json:"openInterest"`
 	TimeValue              float64   `json:"timeValue"`
-	TheoreticalOptionValue JSONFloat `json:"theoreticalOptionValue"`
-	TheoreticalVolatility  JSONFloat `json:"theoreticalVolatility"`
+	TheoreticalOptionValue JSONFloat `json:"theoreticalOptionValue" dataframe:",float"`
+	TheoreticalVolatility  JSONFloat `json:"theoreticalVolatility" dataframe:",float"`
 	OptionDeliverablesList string    `json:"optionDeliverablesList"`
 	StrikePrice            float64   `json:"strikePrice"`
 	ExpirationDate         int       `json:"expirationDate"`
